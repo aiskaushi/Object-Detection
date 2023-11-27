@@ -99,6 +99,9 @@ Object and Animal Recognition With Raspberry Pi and OpenCV
         -D BUILD_EXAMPLES=ON ..
     make -j $(nproc) # This 'make' command will take over an hour to install and there will be no indication of how much longer it will take.
     sudo make install && sudo ldconfig
+10. Change the number on `CONF_SWAPSIZE = 2048` to `CONF_SWAPSIZE= 100`:
+    ```bash
+    sudo nano /etc/dphys-swapfile  
     sudo reboot
     ```
 
