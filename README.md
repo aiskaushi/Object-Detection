@@ -1,4 +1,4 @@
-![Example Image]([https://via.placeholder.com/150](https://github.com/aiskaushi/Object-Detection/blob/main/image1.jpg))
+![Example Image](https://github.com/aiskaushi/Object-Detection/blob/main/image1.jpg)
 
 
 # Object-Detection using Raspberry pi
