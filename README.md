@@ -1,7 +1,4 @@
-![Example Image](https://github.com/aiskaushi/Object-Detection/blob/main/image1.jpg)
-
-
-# Object-Detection using Raspberry pi
+# Object-Detection using Raspberry Pi
 
 Object and Animal Recognition With Raspberry Pi and OpenCV
 
@@ -10,41 +7,85 @@ Object and Animal Recognition With Raspberry Pi and OpenCV
 - [Usage](#usage)
 - [Contributing](#contributing)
 
+---
+
 ## Basic and Initial Requirements
-0. Download the link for armhf-image
-   ```bash
-   https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/
-## Check the current size of the Raspberry Pi OS Install. 
-1. type this command
-   ```bash
-   df -h /
-## Cutting the Fat from Raspberry Pi OS.   
-2. type this command
-   ```bash
-   dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n -r | head -n 20
 
-## First let’s prepare the system for the installation.
-3. Remove unnecessary files
-   ```bash
-   sudo apt-get -y purge wolfram-engine
-   sudo apt-get -y purge libreoffice*
-   sudo apt-get -y clean
-   sudo apt-get -y autoremove
+1. Download the link for armhf-image:
+    ```bash
+    https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/
+    ```
 
-## Setting Up Open-CV for Object Detection
-1. Update & upgrade your raspberry pi-4
-   ```bash
-   sudo apt-get update && sudo apt-get upgrade
-2. The change the number on CONF_SWAPSIZE = 100 to CONF_SWAPSIZE=2048.
-   ```bash
-   sudo nano /etc/dphys-swapfile
-3. just copy and paste
-   ```bash
-   sudo apt-get install build-essential cmake pkg-config
-3. ff   
+2. Check the current size of the Raspberry Pi OS Install:
+    ```bash
+    df -h /
+    ```
 
+3. Cutting the Fat from Raspberry Pi OS:
+    ```bash
+    dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n -r | head -n 20
+    ```
 
+---
 
-2. Clone the repository.
-   ```bash
-   git clone https://github.com/aiskaushi/Object-Detection.git
+## First, let’s prepare the system for the installation.
+
+4. Remove unnecessary files:
+    ```bash
+    sudo apt-get -y purge wolfram-engine
+    sudo apt-get -y purge libreoffice*
+    sudo apt-get -y clean
+    sudo apt-get -y autoremove
+    ```
+
+---
+
+## Setting Up OpenCV for Object Detection
+
+5. Update & upgrade your Raspberry Pi-4:
+    ```bash
+    sudo apt-get update && sudo apt-get upgrade
+    ```
+
+6. Change the number on `CONF_SWAPSIZE = 100` to `CONF_SWAPSIZE=2048`:
+    ```bash
+    sudo nano /etc/dphys-swapfile
+    ```
+
+7. Install necessary packages:
+    ```bash
+    sudo apt-get install build-essential cmake pkg-config
+    sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+    sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+    sudo apt-get install libxvidcore-dev libx264-dev
+    sudo apt-get install libgtk2.0-dev libgtk-3-dev
+    sudo apt-get install libatlas-base-dev gfortran
+    sudo pip3 install numpy
+    ```
+
+8. Download and unzip OpenCV:
+    ```bash
+    wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.1.zip
+    wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.4.1.zip
+    unzip opencv.zip
+    unzip opencv_contrib.zip
+    ```
+
+9. Build and install OpenCV:
+    ```bash
+    cd ~/opencv-4.4.0/
+    mkdir build
+    cd build
+    cmake -D CMAKE_BUILD_TYPE=RELEASE \
+        -D CMAKE_INSTALL_PREFIX=/usr/local \
+        -D INSTALL_PYTHON_EXAMPLES=ON \
+        -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-4.4.0/modules \
+        -D BUILD_EXAMPLES=ON ..
+    make -j $(nproc) # This 'make' command will take over an hour to install and there will be no indication of how much longer it will take.
+    sudo make install && sudo ldconfig
+    sudo reboot
+    ```
+
+---
+
+Replace the image link with the correct one if needed.
