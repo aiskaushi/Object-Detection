@@ -1,26 +1,9 @@
 # Object-Detection
 Object and Animal Recognition With Raspberry Pi and OpenCV
-Basic and Initial Requirements
-How to Flash the Old 'Buster' Raspberry Pi OS to a Micro-SD
-Download this OS raspios_armhf
+# Basic and Initial Requirements
 https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/
 
-**Enable camera and SSH**
-$ sudo reboot
-******Try to run ******
-$ Raspistill -o test.jpg
-$ Sudo apt-get  update
-$ Sudo apt-get  upgrade
-$ Raspistill -o test.jpg
-**Install picamera**
-$ sudo apt-get update
-$ sudo apt-get install python-picamera python3-picamera
-
-**Open a Python 3 editor, such as Thonny Python IDE:
- Open a new file and save it as camera.py.
-Note: it’s important that you never save the file as picamera.py.
-Setting Up Open-CV for Object Detection**
-
+**Setting Up Open-CV for Object Detection**
 1.$ sudo apt-get update && sudo apt-get upgrade
 
 2.$ sudo nano /etc/dphys-swapfile
