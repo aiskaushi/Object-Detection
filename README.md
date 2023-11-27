@@ -1,3 +1,19 @@
+# Project Title
+
+Short description of your project.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+1. Clone the repository.
+   ```bash
+   git clone https://github.com/username/repo.git
+
 # Object-Detection
 Object and Animal Recognition With Raspberry Pi and OpenCV
 # Basic and Initial Requirements
