@@ -1,6 +1,6 @@
-# Project Title
+# Object-Detection using Raspberry pi
 
-Short description of your project.
+Object and Animal Recognition With Raspberry Pi and OpenCV
 
 ## Table of Contents
 - [Installation](#installation)
@@ -8,16 +8,18 @@ Short description of your project.
 - [Contributing](#contributing)
 - [License](#license)
 
-## Installation
-
+## Basic and Initial Requirements
+1. Download the link for armhf-image
+   ```bash
+   https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/
 1. Clone the repository.
    ```bash
-   git clone https://github.com/username/repo.git
+   git clone https://github.com/aiskaushi/Object-Detection.git
 
-# Object-Detection
-Object and Animal Recognition With Raspberry Pi and OpenCV
-# Basic and Initial Requirements
-https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-05-28/
+
+
+
+
 
 **Setting Up Open-CV for Object Detection**
 1.$ sudo apt-get update && sudo apt-get upgrade
