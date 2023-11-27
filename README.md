@@ -1,11 +1,27 @@
+![Example Image](https://github.com/aiskaushi/Object-Detection/blob/main/image1.jpg)
+
+# Object-Detection using Raspberry Pi
+
+Object and Animal Recognition With Raspberry Pi and OpenCV
+
 # Object-Detection using Raspberry Pi
 
 Object and Animal Recognition With Raspberry Pi and OpenCV
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+  - [Download armhf-image](#download-armhf-image)
+  - [Check Raspberry Pi OS Size](#check-raspberry-pi-os-size)
+  - [Cutting the Fat from Raspberry Pi OS](#cutting-the-fat-from-raspberry-pi-os)
+- [Prepare System for Installation](#prepare-system-for-installation)
+  - [Remove Unnecessary Files](#remove-unnecessary-files)
+- [Setting Up OpenCV for Object Detection](#setting-up-opencv-for-object-detection)
+  - [Update & Upgrade Raspberry Pi-4](#update--upgrade-raspberry-pi-4)
+  - [Change CONF_SWAPSIZE](#change-conf-swapsize)
+  - [Install Necessary Packages](#install-necessary-packages)
+  - [Download and Unzip OpenCV](#download-and-unzip-opencv)
+  - [Build and Install OpenCV](#build-and-install-opencv)
+  - [Reboot](#reboot)
 
 ---
 
@@ -88,4 +104,4 @@ Object and Animal Recognition With Raspberry Pi and OpenCV
 
 ---
 
-Replace the image link with the correct one if needed.
+Thank You for following steps correctly.
