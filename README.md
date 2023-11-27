@@ -1,4 +1,5 @@
-![Example Image](images/example.jpg)
+![Example Image](https://via.placeholder.com/150)
+
 
 # Object-Detection using Raspberry pi
 
