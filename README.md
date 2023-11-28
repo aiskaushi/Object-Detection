@@ -25,7 +25,7 @@ Object and Animal Recognition With Raspberry Pi and OpenCV
 
 ---
 
-## Basic and Initial Requirements
+## Installation & Basic and Initial Requirements
 
 1. Download the link for armhf-image:
     ```bash
