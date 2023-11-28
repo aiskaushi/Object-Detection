@@ -9,7 +9,7 @@ Object and Animal Recognition With Raspberry Pi and OpenCV
 Object and Animal Recognition With Raspberry Pi and OpenCV
 
 ## Table of Contents
-- [Installation](#installation)
+- [Installation](#installation-Basic-and-Initial-Requirements)
   - [Download armhf-image](#download-armhf-image)
   - [Check Raspberry Pi OS Size](#check-raspberry-pi-os-size)
   - [Cutting the Fat from Raspberry Pi OS](#cutting-the-fat-from-raspberry-pi-os)
